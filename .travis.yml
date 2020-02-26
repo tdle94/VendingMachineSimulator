@@ -1,4 +1,4 @@
 language: objective-c
 xcode_project: VendingMachine.xcodeproj # path to your xcodeproj folder
-xcode_scheme: VendingMachineTests
-xcode_destination: platform=iOS Simulator,OS=13.1,name=iphone 8 Plus
+xcode_scheme: VendingMachine
+xcode_destination: platform=iOS Simulator,OS=13.3,name=iPhone 11
