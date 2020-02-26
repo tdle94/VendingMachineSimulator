@@ -1,0 +1,15 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "3354b0141f36cf55ab611262224a7a05"
+build_time: [1582754629, 720751000]
+inputs:
+  "/Users/tuyenle/VendingMachine/VendingMachine/Model.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/Constant.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/Vending Machine/VendingMachine + ViewController.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/Vending Machine/VendingMachine + Presenter.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/Enum.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/AppDelegate.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/SceneDelegate.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/VendingMachine/Vending Machine/VendingMachine + Extension.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/build/VendingMachine.build/Release-iphoneos/VendingMachine.build/DerivedSources/CoreDataGenerated/VendingMachine/VendingMachine+CoreDataClass.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/build/VendingMachine.build/Release-iphoneos/VendingMachine.build/DerivedSources/CoreDataGenerated/VendingMachine/VendingMachine+CoreDataProperties.swift": [9223372036, 854775807]
+  "/Users/tuyenle/VendingMachine/build/VendingMachine.build/Release-iphoneos/VendingMachine.build/DerivedSources/CoreDataGenerated/VendingMachine/VendingMachine+CoreDataModel.swift": [9223372036, 854775807]

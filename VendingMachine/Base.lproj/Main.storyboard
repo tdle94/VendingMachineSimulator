@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Vending Machine View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="VendingMachine" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VendingMachineViewController" customModule="VendingMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjb-4V-HEs">
+                                <rect key="frame" x="187" y="466" width="40" height="30"/>
+                                <state key="normal" title="Insert"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="InsertCointButton"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="insertCoin" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTO-1u-trl"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBB-db-zKk">
+                                <rect key="frame" x="0.0" y="146" width="414" height="233"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ezf-Ln-BqE">
+                                        <rect key="frame" x="8" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Zns-OU-D7j"/>
+                                        </constraints>
+                                        <state key="normal" title="Candy"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="BuyCandyButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buyCandy" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPc-CB-OIS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INSERT COIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZh-xf-4TP">
+                                        <rect key="frame" x="155.5" y="106" width="103" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="c85-3h-ag8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="DisplayMessage"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zx3-vD-Rlf">
+                                        <rect key="frame" x="201" y="164.5" width="45" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ChangeLabel"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9W-FG-O1A">
+                                        <rect key="frame" x="325" y="160.5" width="81" height="30"/>
+                                        <state key="normal" title="Return Coin"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ReturnCoinButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="returnCoin" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ame-Ip-IkF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Changes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDJ-0V-MUM">
+                                        <rect key="frame" x="120" y="164.5" width="73" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkE-lH-y5p">
+                                        <rect key="frame" x="157" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="hgU-e6-f87"/>
+                                        </constraints>
+                                        <state key="normal" title="Cola"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="BuyColaButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buyCola" destination="BYZ-38-t0r" eventType="touchUpInside" id="FS4-iD-VAT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-va-kwN">
+                                        <rect key="frame" x="306" y="0.0" width="100" height="100"/>
+                                        <state key="normal" title="Chip"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="BuyChipButton"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="buyChip" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UJ-y2-hT8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="JDJ-0V-MUM" firstAttribute="top" secondItem="ZZh-xf-4TP" secondAttribute="bottom" constant="37.5" id="1KS-rA-Wbz"/>
+                                    <constraint firstItem="ZZh-xf-4TP" firstAttribute="top" secondItem="EkE-lH-y5p" secondAttribute="bottom" constant="6" id="5Ah-se-GFq"/>
+                                    <constraint firstItem="Ezf-Ln-BqE" firstAttribute="leading" secondItem="wBB-db-zKk" secondAttribute="leading" constant="8" id="9GQ-gt-XWB"/>
+                                    <constraint firstItem="Ezf-Ln-BqE" firstAttribute="top" secondItem="wBB-db-zKk" secondAttribute="top" id="EE6-OI-Nuu"/>
+                                    <constraint firstItem="ZZh-xf-4TP" firstAttribute="centerY" secondItem="wBB-db-zKk" secondAttribute="centerY" id="FSp-e0-bTc"/>
+                                    <constraint firstItem="ZZh-xf-4TP" firstAttribute="centerX" secondItem="wBB-db-zKk" secondAttribute="centerX" id="H04-RU-Spt"/>
+                                    <constraint firstItem="zx3-vD-Rlf" firstAttribute="leading" secondItem="JDJ-0V-MUM" secondAttribute="trailing" constant="8" id="K2I-yZ-AS1"/>
+                                    <constraint firstItem="f9W-FG-O1A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zx3-vD-Rlf" secondAttribute="trailing" constant="8" symbolic="YES" id="Mdi-qq-a9R"/>
+                                    <constraint firstItem="gKh-va-kwN" firstAttribute="top" secondItem="wBB-db-zKk" secondAttribute="top" id="PxA-J8-Q7H"/>
+                                    <constraint firstItem="zx3-vD-Rlf" firstAttribute="top" secondItem="ZZh-xf-4TP" secondAttribute="bottom" constant="37.5" id="PxJ-sK-Iy3"/>
+                                    <constraint firstItem="gKh-va-kwN" firstAttribute="leading" secondItem="EkE-lH-y5p" secondAttribute="trailing" constant="49" id="VUG-Pm-Cpd"/>
+                                    <constraint firstItem="EkE-lH-y5p" firstAttribute="centerX" secondItem="wBB-db-zKk" secondAttribute="centerX" id="aTQ-6h-KE3"/>
+                                    <constraint firstAttribute="trailing" secondItem="gKh-va-kwN" secondAttribute="trailing" constant="8" id="aX0-6s-V9K"/>
+                                    <constraint firstItem="EkE-lH-y5p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ezf-Ln-BqE" secondAttribute="trailing" constant="8" symbolic="YES" id="ayi-hD-tst"/>
+                                    <constraint firstItem="EkE-lH-y5p" firstAttribute="top" secondItem="wBB-db-zKk" secondAttribute="top" id="ayv-Cd-CUk"/>
+                                    <constraint firstItem="ZZh-xf-4TP" firstAttribute="top" secondItem="Ezf-Ln-BqE" secondAttribute="bottom" constant="6" id="cVi-9V-84v"/>
+                                    <constraint firstAttribute="trailing" secondItem="f9W-FG-O1A" secondAttribute="trailing" constant="8" id="hNA-gJ-FjT"/>
+                                    <constraint firstItem="JDJ-0V-MUM" firstAttribute="leading" secondItem="wBB-db-zKk" secondAttribute="leading" constant="120" id="m7U-9l-SCc"/>
+                                    <constraint firstItem="ZZh-xf-4TP" firstAttribute="top" secondItem="gKh-va-kwN" secondAttribute="bottom" constant="6" id="tNJ-lg-5Yd"/>
+                                    <constraint firstItem="f9W-FG-O1A" firstAttribute="top" secondItem="ZZh-xf-4TP" secondAttribute="bottom" constant="33.5" id="x3N-JW-YB8"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="quarter, dime, penny" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kLl-sg-jfz">
+                                <rect key="frame" x="126.5" y="412" width="161.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="CoinInputTextField"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kLl-sg-jfz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1Q4-fq-acm"/>
+                            <constraint firstItem="Sjb-4V-HEs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="52r-Gt-w9M"/>
+                            <constraint firstItem="kLl-sg-jfz" firstAttribute="top" secondItem="wBB-db-zKk" secondAttribute="bottom" constant="33" id="Mw3-pt-zvR"/>
+                            <constraint firstItem="wBB-db-zKk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="QmU-cb-q8K"/>
+                            <constraint firstItem="wBB-db-zKk" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="TQj-sP-uLO"/>
+                            <constraint firstItem="kLl-sg-jfz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="368" id="VcK-h2-bbx"/>
+                            <constraint firstItem="wBB-db-zKk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vG6-gi-917"/>
+                            <constraint firstItem="Sjb-4V-HEs" firstAttribute="top" secondItem="kLl-sg-jfz" secondAttribute="bottom" constant="20" id="xLV-ln-IaA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="insertCoinTextField" destination="kLl-sg-jfz" id="UD8-Ip-k7d"/>
+                        <outlet property="returnChangeLabel" destination="zx3-vD-Rlf" id="GtF-3W-Nue"/>
+                        <outlet property="vendingMachineMessageLabel" destination="ZZh-xf-4TP" id="O6Q-KY-8Mn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

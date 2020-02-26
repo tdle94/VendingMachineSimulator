@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+options: "49246ced50d925bdf1b45c870b8d13b2"
+build_time: [1582754630, 810776000]
+inputs:
+  "/Users/tuyenle/VendingMachine/VendingMachineTests/VendingMachineTests.swift": [9223372036, 854775807]
