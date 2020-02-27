@@ -22,9 +22,9 @@ struct Model {
      Number of quarters, dimes and nickles in the vending machine.
      They are used to return changes back to customers.
      */
-    private(set) var numberOfQuarter: Int = 1
-    private(set) var numberOfDime: Int = 5
-    private(set) var numberOfNickle: Int = 2
+    private(set) var numberOfQuarter: Int = 0
+    private(set) var numberOfDime: Int = 0
+    private(set) var numberOfNickle: Int = 0
 
     /**
      Keep track of the number of quarters, dimes and nickles customer insert.

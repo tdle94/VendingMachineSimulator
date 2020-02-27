@@ -38,7 +38,7 @@ class VendingMachineUITests: XCTestCase {
     func testInsertCoin() {
         // valid coin
         coinInputTextField.tap()
-        coinInputTextField.typeText("0.05")
+        coinInputTextField.clearAndEnterText(text: "0.05")
         insertCoinButton.tap()
         XCTAssertEqual(displayMessage.label, "$0.05")
         
@@ -63,12 +63,16 @@ class VendingMachineUITests: XCTestCase {
     }
     
     func testReturnCoin() {
-        coinInputTextField.typeText("0.05")
-        coinInputTextField.typeText("0.25")
-        coinInputTextField.typeText("0.05")
-        coinInputTextField.typeText("0.1")
-        
-        XCTAssertEqual(displayMessage.label, "$0.45")
+        coinInputTextField.tap()
+        coinInputTextField.clearAndEnterText(text: "0.05")
+        insertCoinButton.tap()
+        coinInputTextField.clearAndEnterText(text: "0.25")
+        insertCoinButton.tap()
+        coinInputTextField.clearAndEnterText(text: "0.05")
+        insertCoinButton.tap()
+        coinInputTextField.clearAndEnterText(text: "0.1")
+        insertCoinButton.tap()
+
         returnCoinButton.tap()
         XCTAssertEqual(changesReturn.label, "$0.45")
         XCTAssertEqual(displayMessage.label, "INSERT COIN")
