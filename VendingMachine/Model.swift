@@ -34,8 +34,8 @@ struct Model {
      Number of candy, cola and chip available
      */
     private(set) var candy: Int = 12
-    private(set) var cola: Int = 12
-    private(set) var chip: Int = 12
+    private(set) var cola: Int = 5
+    private(set) var chip: Int = 8
 
     mutating func insert(coin: Coin) {
         switch coin {
