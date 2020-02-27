@@ -11,7 +11,6 @@
 		34500DC4240482B000838A8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34500DC3240482B000838A8F /* SceneDelegate.swift */; };
 		34500DC6240482B000838A8F /* VendingMachine + ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34500DC5240482B000838A8F /* VendingMachine + ViewController.swift */; };
 		34500DC9240482B000838A8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34500DC7240482B000838A8F /* Main.storyboard */; };
-		34500DCC240482B000838A8F /* VendingMachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34500DCA240482B000838A8F /* VendingMachine.xcdatamodeld */; };
 		34500DCE240482B100838A8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34500DCD240482B100838A8F /* Assets.xcassets */; };
 		34500DD1240482B100838A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34500DCF240482B100838A8F /* LaunchScreen.storyboard */; };
 		34500DDC240482B100838A8F /* VendingMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34500DDB240482B100838A8F /* VendingMachineTests.swift */; };
@@ -46,7 +45,6 @@
 		34500DC3240482B000838A8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		34500DC5240482B000838A8F /* VendingMachine + ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VendingMachine + ViewController.swift"; sourceTree = "<group>"; };
 		34500DC8240482B000838A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		34500DCB240482B000838A8F /* VendingMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VendingMachine.xcdatamodel; sourceTree = "<group>"; };
 		34500DCD240482B100838A8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34500DD0240482B100838A8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34500DD2240482B100838A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				34500DCD240482B100838A8F /* Assets.xcassets */,
 				34500DCF240482B100838A8F /* LaunchScreen.storyboard */,
 				34500DD2240482B100838A8F /* Info.plist */,
-				34500DCA240482B000838A8F /* VendingMachine.xcdatamodeld */,
 			);
 			path = VendingMachine;
 			sourceTree = "<group>";
@@ -293,7 +290,6 @@
 				34500DC2240482B000838A8F /* AppDelegate.swift in Sources */,
 				34500DC4240482B000838A8F /* SceneDelegate.swift in Sources */,
 				34500DFB2404D88900838A8F /* VendingMachine + Extension.swift in Sources */,
-				34500DCC240482B000838A8F /* VendingMachine.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,19 +619,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		34500DCA240482B000838A8F /* VendingMachine.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				34500DCB240482B000838A8F /* VendingMachine.xcdatamodel */,
-			);
-			currentVersion = 34500DCB240482B000838A8F /* VendingMachine.xcdatamodel */;
-			path = VendingMachine.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 34500DB6240482B000838A8F /* Project object */;
 }
