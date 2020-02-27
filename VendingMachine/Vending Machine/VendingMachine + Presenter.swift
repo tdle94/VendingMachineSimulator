@@ -14,7 +14,7 @@ protocol VendingMachinePresenterDelegate: AnyObject {
     func requireExact(changes: Double)
     func make(changes: Double)
     func returnInvalid(coin: Double)
-    func soldOut(display insertedCoins: Double)
+    func soldOut(return insertedCoins: Double)
     func updateInserted(coin: Double)
     func notEnoughCoinInsert(for product: Product)
     func noCoinInsert()
@@ -42,7 +42,7 @@ struct VendingMachinePresenter {
     mutating func dispense(product: Product) {
         /// Make sure product is still available
         guard model.canBuy(product: product) else {
-            delegate?.soldOut(display: model.coinInserted)
+            delegate?.soldOut(return: model.coinInserted)
             return
         }
 

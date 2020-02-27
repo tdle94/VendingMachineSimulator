@@ -21,7 +21,7 @@ extension VendingMachineViewController: VendingMachinePresenterDelegate {
         vendingMachineMessageLabel.text = "$\(Converter.twoDecimal(value: coin))"
     }
 
-    func soldOut(display insertedCoins: Double) {
+    func soldOut(return insertedCoins: Double) {
         vendingMachineMessageLabel.text = Constant.soldOut
     }
 
