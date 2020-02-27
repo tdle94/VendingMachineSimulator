@@ -13,10 +13,6 @@ struct Model {
     var coinInserted: Double {
         return Double(quarterInserted) * 0.25 + Double(dimeInserted) * 0.1 + Double(nickleInserted) * 0.05
     }
-    
-    var totalCoin: Double {
-        return Double(numberOfQuarter) * 0.25 + Double(numberOfDime) * 0.1 + Double(numberOfNickle) * 0.05
-    }
 
     /**
      Number of quarters, dimes and nickles in the vending machine.
