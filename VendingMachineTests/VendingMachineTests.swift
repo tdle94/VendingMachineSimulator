@@ -93,6 +93,69 @@ class VendingMachineTests: XCTestCase {
         XCTAssertEqual(vendingMachinePresenter.model.quarterInserted, 1)
         vendingMachinePresenter.dispense(product: .cola)
         XCTAssertEqual(vendingMachineViewController.vendingMachineMessageLabel.text, Constant.price + ": $\(Product.cola.rawValue)")
+        
+        // insert $0.5 more to buy chip
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+
+        vendingMachinePresenter.dispense(product: .chip)
+
+        XCTAssertEqual(vendingMachineViewController.vendingMachineMessageLabel.text, Constant.thankyou)
+        XCTAssertEqual(vendingMachineViewController.returnChangeLabel.text, "$0.25")
+        
+        // verify number of quarter, dime and nickle in vending machine
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfQuarter, 4)
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfDime, 5)
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfNickle, 0)
+
+        // buy candy with $0.70
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        
+        vendingMachinePresenter.dispense(product: .candy)
+
+        XCTAssertEqual(vendingMachineViewController.vendingMachineMessageLabel.text, Constant.exactChange)
+
+        // return coins
+        vendingMachinePresenter.requestReturnCoins()
+        XCTAssertEqual(vendingMachineViewController.returnChangeLabel.text, "$0.7")
+        
+        // verify number of quarter, dime and nickle in vending machine
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfQuarter, 4)
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfDime, 5)
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfNickle, 0)
+        
+        // buy candy with $0.65
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.05")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        vendingMachinePresenter.insert(coin: "0.1")
+        
+        vendingMachinePresenter.dispense(product: .candy)
+        XCTAssertEqual(vendingMachineViewController.vendingMachineMessageLabel.text, Constant.thankyou)
+        XCTAssertEqual(vendingMachineViewController.returnChangeLabel.text, "$0.0")
+        
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfQuarter, 4)
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfDime, 8)
+        XCTAssertEqual(vendingMachinePresenter.model.numberOfNickle, 7)
+        
     }
 
 }
