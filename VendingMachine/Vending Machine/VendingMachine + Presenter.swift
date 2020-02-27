@@ -86,7 +86,6 @@ struct VendingMachinePresenter {
 
         delegate?.make(changes: changesReturnToCustomer)
         model.buy(product: product)
-        print("number of quarter: \(model.numberOfQuarter)", " number of dime: \(model.numberOfDime)", " number of nickle: \(model.numberOfNickle)", " total: \(Converter.twoDecimal(value: model.totalCoin))")
     }
 
     mutating func requestReturnCoins() {
