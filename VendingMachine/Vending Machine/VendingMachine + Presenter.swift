@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol VendingMachineViewModelDelegate: AnyObject {
+protocol VendingMachinePresenterDelegate: AnyObject {
     func requestReturn(coin: Double)
     func requireExact(changes: Double)
     func make(changes: Double)
@@ -24,7 +24,7 @@ struct VendingMachinePresenter {
 
     private(set) var model = Model()
     
-    weak var delegate: VendingMachineViewModelDelegate?
+    weak var delegate: VendingMachinePresenterDelegate?
 
     mutating func insert(coin text: String?) {
         guard let text = text, let value = Double(text) else {

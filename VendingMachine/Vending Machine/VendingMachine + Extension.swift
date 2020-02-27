@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension VendingMachineViewController: VendingMachineViewModelDelegate {
+extension VendingMachineViewController: VendingMachinePresenterDelegate {
     func notEnoughCoinInsert(for product: Product) {
         vendingMachineMessageLabel.text = Constant.price + ": $\(product.rawValue)"
     }
