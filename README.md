@@ -1,6 +1,6 @@
 # VendingMachineSimulator [![Build Status](https://travis-ci.com/tdle94/VendingMachineSimulator.svg?branch=master)](https://travis-ci.com/tdle94/VendingMachineSimulator)
 
-Initially the vending machine has 0 quarter, 0 dime and 0 nickle but you can manually change the value in ```Model.swift``` file
+Initially the vending machine has 0 ``quarter``, 0 ``dime`` and 0 ``nickle`` but you can manually change the value in ```Model.swift``` file
 
 ```
 struct Model {
