@@ -3,4 +3,4 @@ os: osx
 osx_image: xcode11.1
 xcode_project: VendingMachine.xcodeproj 
 xcode_scheme: VendingMachine
-xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 8 Plus
+xcode_destination: platform=iOS Simulator,OS=13.2.2,name=iPhone 8
