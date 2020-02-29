@@ -86,6 +86,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		344FA532240B318A002D2847 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				344FA537240B31E2002D2847 /* Types */,
+				344FA536240B31D1002D2847 /* Model */,
+				344FA535240B31BE002D2847 /* Extension */,
+				344FA534240B31B4002D2847 /* Presenters */,
+				344FA533240B31A1002D2847 /* ViewControllers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		344FA533240B31A1002D2847 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				34500DC5240482B000838A8F /* VendingMachine + ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		344FA534240B31B4002D2847 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				34500DF424048E2600838A8F /* VendingMachine + Presenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		344FA535240B31BE002D2847 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				34500DFA2404D88800838A8F /* VendingMachine + Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		344FA536240B31D1002D2847 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				34500DFC2404D8CB00838A8F /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		344FA537240B31E2002D2847 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				34500DF62404D84C00838A8F /* Enum.swift */,
+				34500DF82404D86400838A8F /* Constant.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		34500DB5240482B000838A8F = {
 			isa = PBXGroup;
 			children = (
@@ -109,12 +162,9 @@
 		34500DC0240482B000838A8F /* VendingMachine */ = {
 			isa = PBXGroup;
 			children = (
-				34500DFE2404D94B00838A8F /* Vending Machine */,
+				344FA532240B318A002D2847 /* Source */,
 				34500DC1240482B000838A8F /* AppDelegate.swift */,
 				34500DC3240482B000838A8F /* SceneDelegate.swift */,
-				34500DF62404D84C00838A8F /* Enum.swift */,
-				34500DF82404D86400838A8F /* Constant.swift */,
-				34500DFC2404D8CB00838A8F /* Model.swift */,
 				34500DC7240482B000838A8F /* Main.storyboard */,
 				34500DCD240482B100838A8F /* Assets.xcassets */,
 				34500DCF240482B100838A8F /* LaunchScreen.storyboard */,
@@ -139,16 +189,6 @@
 				34500DE8240482B100838A8F /* Info.plist */,
 			);
 			path = VendingMachineUITests;
-			sourceTree = "<group>";
-		};
-		34500DFE2404D94B00838A8F /* Vending Machine */ = {
-			isa = PBXGroup;
-			children = (
-				34500DFA2404D88800838A8F /* VendingMachine + Extension.swift */,
-				34500DC5240482B000838A8F /* VendingMachine + ViewController.swift */,
-				34500DF424048E2600838A8F /* VendingMachine + Presenter.swift */,
-			);
-			path = "Vending Machine";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
