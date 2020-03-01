@@ -63,26 +63,9 @@ struct Model {
     }
     
     mutating func canBuy(product: Product) -> Bool {
-        var canBeBought = false
-
-        switch product {
-        case .candy:
-            if candy > 0 {
-                canBeBought = true
-            }
-            break
-        case .chip:
-            if chip > 0 {
-                canBeBought = true
-            }
-            break
-        case .cola:
-            if cola > 0 {
-                canBeBought = true
-            }
-        }
-
-        return canBeBought
+        return  product == .candy && candy > 0 ||
+                product == .chip && chip > 0 ||
+                product == .cola && cola > 0
     }
     
     mutating func buy(product: Product) {
