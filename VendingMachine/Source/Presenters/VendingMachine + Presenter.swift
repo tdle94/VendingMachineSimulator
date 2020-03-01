@@ -22,7 +22,7 @@ protocol VendingMachinePresenterDelegate: AnyObject {
 
 struct VendingMachinePresenter {
 
-    private(set) var model = Model()
+    private(set) var vendingMachine = Model()
     
     weak var delegate: VendingMachinePresenterDelegate?
 
@@ -32,8 +32,8 @@ struct VendingMachinePresenter {
         }
 
         if let coin = Coin(rawValue: value) {
-            model.insert(coin: coin)
-            delegate?.updateInserted(coin: model.coinInserted)
+            vendingMachine.insert(coin: coin)
+            delegate?.updateInserted(coin: vendingMachine.coinInserted)
         } else {
             delegate?.returnInvalid(coin: value)      // return invalid coin to customer
         }
@@ -41,13 +41,13 @@ struct VendingMachinePresenter {
 
     mutating func dispense(product: Product) {
         /// Make sure product is still available
-        guard model.canBuy(product: product) else {
-            delegate?.soldOut(return: model.coinInserted)
+        guard vendingMachine.canBuy(product: product) else {
+            delegate?.soldOut(return: vendingMachine.coinInserted)
             return
         }
 
-        guard model.coinInserted >= product.rawValue else {
-            if model.coinInserted == 0.0 {
+        guard vendingMachine.coinInserted >= product.rawValue else {
+            if vendingMachine.coinInserted == 0.0 {
                 delegate?.noCoinInsert()
             } else {
                 delegate?.notEnoughCoinInsert(for: product)
@@ -55,7 +55,7 @@ struct VendingMachinePresenter {
             return
         }
 
-        var changesNeed = model.coinInserted - product.rawValue
+        var changesNeed = vendingMachine.coinInserted - product.rawValue
         let changesReturnToCustomer = changesNeed
 
         let quartersNeed = Int(changesNeed / 0.25)
@@ -67,29 +67,29 @@ struct VendingMachinePresenter {
         let nicklesNeed = Int(changesNeed / 0.05)
         changesNeed = Converter.twoDecimal(value: changesNeed - Double(nicklesNeed) * 0.05)
 
-        if model.numberOfQuarter < quartersNeed || model.numberOfDime < dimesNeed || model.numberOfNickle < nicklesNeed {
+        if vendingMachine.numberOfQuarter < quartersNeed || vendingMachine.numberOfDime < dimesNeed || vendingMachine.numberOfNickle < nicklesNeed {
             delegate?.requireExact(changes: product.rawValue)
             return
         }
 
-        if model.numberOfQuarter >= quartersNeed {
-            model.subtractNumberOf(quarter: quartersNeed)
+        if vendingMachine.numberOfQuarter >= quartersNeed {
+            vendingMachine.subtractNumberOf(quarter: quartersNeed)
         }
         
-        if model.numberOfDime >= dimesNeed {
-            model.subtractNumberOf(dime: dimesNeed)
+        if vendingMachine.numberOfDime >= dimesNeed {
+            vendingMachine.subtractNumberOf(dime: dimesNeed)
         }
         
-        if model.numberOfNickle >= nicklesNeed {
-            model.subtractNumberOf(nickle: nicklesNeed)
+        if vendingMachine.numberOfNickle >= nicklesNeed {
+            vendingMachine.subtractNumberOf(nickle: nicklesNeed)
         }
 
         delegate?.make(changes: changesReturnToCustomer)
-        model.buy(product: product)
+        vendingMachine.buy(product: product)
     }
 
     mutating func requestReturnCoins() {
-        delegate?.requestReturn(coin: model.coinInserted) // customer request inserted amount back
-        model.resetCoinInserted()
+        delegate?.requestReturn(coin: vendingMachine.coinInserted) // customer request inserted amount back
+        vendingMachine.resetCoinInserted()
     }
 }
