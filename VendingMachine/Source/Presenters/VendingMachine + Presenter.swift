@@ -72,17 +72,9 @@ struct VendingMachinePresenter {
             return
         }
 
-        if vendingMachine.numberOfQuarter >= quartersNeed {
-            vendingMachine.subtractNumberOf(quarter: quartersNeed)
-        }
-        
-        if vendingMachine.numberOfDime >= dimesNeed {
-            vendingMachine.subtractNumberOf(dime: dimesNeed)
-        }
-        
-        if vendingMachine.numberOfNickle >= nicklesNeed {
-            vendingMachine.subtractNumberOf(nickle: nicklesNeed)
-        }
+        vendingMachine.subtractNumberOf(quarter: quartersNeed)
+        vendingMachine.subtractNumberOf(dime: dimesNeed)
+        vendingMachine.subtractNumberOf(nickle: nicklesNeed)
 
         delegate?.make(changes: changesReturnToCustomer)
         vendingMachine.buy(product: product)
