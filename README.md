@@ -2,7 +2,7 @@
 
 Initially the vending machine has 0 ``quarter``, 0 ``dime`` and 0 ``nickle`` but you can manually change the value in ```Model.swift``` file
 
-```
+```swift
 struct Model {
   ...
  
