@@ -14,10 +14,10 @@ struct Model {
 }
 ```
 
-## How to use:
+## How to use
   - Insert coin
   - Select a product (if not enough coin then repeat step 1 or return changes)
   - Return changes (vending machine might or might not have the appropriate changes. If it does not have the appropriate changes. Return changes to yourself and repeat step one)
   
-## How vending machine works:
-  More on how vending machine [works](https://github.com/guyroyse/vending-machine-kata)
+## How vending machine works
+  More on how vending machine [works](https://github.com/guyroyse/vending-machine-kata).
